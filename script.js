@@ -1,4 +1,5 @@
 // Assignment Code
+//This grabs the generate password button.
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -9,9 +10,14 @@ function writePassword() {
   passwordText.value = password;
 
 }
+// The pool of characters that the password generator will pull from.
+var uppers = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+var lowers = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var symbols = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@',];
 
 function generatePassword() {
-  var useUppercase; 
+  var useUppercase;
   var useLowercase;
   var useNumber;
   var useSpecialChar;
@@ -43,8 +49,9 @@ function generatePassword() {
  } else {
   useSpecialChar = false;
  }
+
 if (useUppercase || useLowercase || useNumber || useSpecialChar) {
-  console.log("yay")
+  
 } else {
   alert("Select at least one character type")
 }
